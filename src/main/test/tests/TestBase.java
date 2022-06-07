@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -14,6 +15,8 @@ import org.testng.annotations.*;
 public class TestBase
 {
     public static WebDriver driver;
+    LoadProperties cp;
+    Properties prop;
     public static FirefoxOptions firefoxOption() {
         FirefoxOptions option= new FirefoxOptions();
         option.addPreference("browser.download.folderList", 2);
@@ -31,8 +34,10 @@ public class TestBase
         return options;
     }
     @BeforeSuite
-    @Parameters({"browser"})
-    public void StartDriver(@Optional("chrome")String browserName){
+    @Parameters({"browser", "language"})
+    public void StartDriver(@Optional("chrome")String browserName,@Optional("en")String lang) throws IOException {
+        cp = new LoadProperties();
+        prop = cp.setLanguage(lang);
         if (browserName.equalsIgnoreCase("Firefox")) {
             System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/driver/geckodriver");
             driver=new FirefoxDriver(firefoxOption());
@@ -43,7 +48,7 @@ public class TestBase
         }
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-       driver.navigate().to(LoadProperties.data.getProperty("url").toString());
+       driver.navigate().to(prop.getProperty("url").toString());
     }
     @AfterSuite
     public void stopDriver() {
