@@ -7,7 +7,6 @@ public class HomePage extends PageBase {
 
     public HomePage(WebDriver driver) {
         super(driver);
-        action= new Actions(driver);
     }
     @FindBy(xpath = "//*[@id=\"content\"]/div/div[1]/div/div[2]/div/div/div/div/div[3]/a")
     WebElement startManageCard;

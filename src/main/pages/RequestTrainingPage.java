@@ -12,4 +12,5 @@ public class RequestTrainingPage extends PageBase{
     public void clickstartBtn(){
         clickBtn(startBtn);
     }
+
 }
