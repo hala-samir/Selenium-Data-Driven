@@ -8,7 +8,7 @@ public class NavigateToLoginPageTest extends TestBase {
     StepByStepBusinessGuidePage stepByStepBusinessObj;
     LoginPage loginPageObj;
     @Test(priority = 1)
-    public void userCanRegisterSuccessfully() {
+    public void userCanRegisterSuccessfully() throws InterruptedException {
         homeObj = new HomePage(driver);
         loginPageObj = new LoginPage(driver);
         startManageBusinessObj = new StartManageBusinessPage(driver);

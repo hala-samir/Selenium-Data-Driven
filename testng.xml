@@ -3,10 +3,9 @@
 <suite name="TestSuite" >
     <parameter name="browser" value="firefox"></parameter>
     <parameter name="language" value="en"></parameter>
-    <test name="FirefoxTest">
+    <test name="FirefoxTest" parallel="false">
         <classes>
-            <class name="NavigateToLoginPageTest">
-            </class>
+            <class name="TrainingRequestTest"></class>
         </classes>
     </test>
 </suite>
