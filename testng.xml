@@ -5,7 +5,7 @@
     <parameter name="language" value="en"></parameter>
     <test name="FirefoxTest" parallel="false">
         <classes>
-            <class name="TrainingRequestTest"></class>
+            <class name="LoginEmiratsTest"></class>
         </classes>
     </test>
 </suite>
