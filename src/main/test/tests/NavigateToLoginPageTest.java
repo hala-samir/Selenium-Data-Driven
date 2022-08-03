@@ -1,7 +1,6 @@
 import data.LoadProperties;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 public class NavigateToLoginPageTest extends TestBase {
     HomePage homeObj;
     StartManageBusinessPage startManageBusinessObj;

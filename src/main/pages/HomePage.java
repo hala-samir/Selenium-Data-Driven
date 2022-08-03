@@ -19,4 +19,9 @@ public class HomePage extends PageBase {
     public void clickBusinessEventAdvCard() {
         clickBtn(businessEventAdvCard);
     }
+    @FindBy (xpath= "//a[contains(@href,'/aspects-of-life/benefits-for-emiratis')]")
+    WebElement benefitsForEmirats;
+    public void clickBenefitsForEmirats() {
+        clickBtn(benefitsForEmirats);
+    }
 }

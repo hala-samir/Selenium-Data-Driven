@@ -7,7 +7,7 @@ public class BusinessEventAdvPage extends  PageBase{
         super(driver);
     }
     @FindBy(tagName = "h1") WebElement title;
-    @FindBy(xpath = "//*[@id=\"app\"]/div/div/div[3]/div/div/div/div/div/div/div[2]/div/div[2]/div/div[1]/div/a/h4") WebElement trainingCard;
+    @FindBy(xpath = "//*[@id=\"app\"]/div/div/div[3]/div/div/div/div/div/div/div[2]/div/div[2]/div/div[3]/div/a") WebElement trainingCard;
     public void clickTrainingCard(){
         clickBtn(trainingCard);
     }
