@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="TestSuite" >
     <parameter name="browser" value="firefox"></parameter>
-    <parameter name="language" value="en"></parameter>
+    <parameter name="language" value="ar"></parameter>
     <test name="FirefoxTest" parallel="false">
         <classes>
             <class name="LoginEmiratsTest"></class>
