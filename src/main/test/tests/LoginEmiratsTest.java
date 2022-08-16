@@ -10,13 +10,15 @@ public class LoginEmiratsTest extends TestBase{
     public void checkSuccessfulLogin(){
         homeObj = new HomePage(driver);
         emiratsBenefitsPageObj = new EmiratsBenefitsPage(driver);
-        //driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
         homeObj.clickBenefitsForEmirats();
         emiratsBenefitsPageObj.clickBuildHomeLink();
         driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+        emiratsBenefitsPageObj.clickLandsAndHomesSection();
+        driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+
         emiratsBenefitsPageObj.clickexchangeLandLink();
-        // driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
-       // driver.getPageSource().contains(prop.getProperty("exchange_land_link").toString());
+        driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+       driver.getPageSource().contains(prop.getProperty("exchange_land_link").toString());
 
 
     }
