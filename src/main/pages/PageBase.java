@@ -12,8 +12,7 @@ public class PageBase {
     public Actions builder;
     //constructor
     public PageBase(WebDriver driver) {
-
-        PageFactory.initElements(driver, this);
+      PageFactory.initElements(driver, this);
     }
     protected void clickBtn(WebElement btn) {
         btn.click();
@@ -21,7 +20,5 @@ public class PageBase {
     public void scrollDown(){
         js.executeScript("window.scrollBy(0,2500)");
     }
-
-
 }
 

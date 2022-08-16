@@ -9,5 +9,8 @@ public class LoginPage extends PageBase {
         super(driver);
     }
     @FindBy(className="ui-lib-uaepass-button") public WebElement loginBtn;
+    public void clickLoginBtn(){
+        clickBtn(loginBtn);
+    }
 
 }

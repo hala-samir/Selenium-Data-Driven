@@ -24,9 +24,6 @@ public class EmiratsBenefitsPage extends PageBase{
     @FindBy (xpath= "//a[contains(@href,'Grants/requestofexchangelandforland')]")
     WebElement exchangeLandLink;
     public void clickexchangeLandLink(){
-       boolean x = exchangeLandLink.isDisplayed();
-       System.out.println("element is displayed "+ x);
-        scrollDown();
-        builder.moveToElement(exchangeLandLink).click().perform();
+        js.executeScript("arguments[0].click();", exchangeLandLink);
     }
 }
