@@ -1,14 +1,17 @@
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class StartManageBusinessPage extends PageBase {
+public class StartManageBusinessPage extends PageBase{
     public StartManageBusinessPage(WebDriver driver) {
         super(driver);
+        js = (JavascriptExecutor) driver;
     }
-     @FindBy(className = "ui-lib-category-list-dummy") public WebElement pageContainer;
-    @FindBy(css = ".ui-lib-highlights-slider__item:nth-child(1)") public WebElement stepByStepBusinessGuideCard;
-    public void clickStepByStepBusinessGuide(){
-        clickBtn(stepByStepBusinessGuideCard);
+    @FindBy(xpath =  "//a[contains(@href,'/licences/user-guide')]")
+    WebElement businessGuideLink;
+    public void clickBusinessGuideLink(){
+        scrollDown();
+        js.executeScript("arguments[0].click();", businessGuideLink);
     }
 }
