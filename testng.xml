@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="TestSuite" >
-    <parameter name="browser" value="firefox"></parameter>
-    <parameter name="language" value="en"></parameter>
+    <parameter name="browser" value="firefox"/>
+    <parameter name="language" value="en"/>
     <test name="FirefoxTest" parallel="false">
         <classes>
-            <class name="LoginEmiratsTest"></class>
+            <class name="LoginEmiratsTest"/>
+            <class name="BusinessGuideTest"/>
         </classes>
     </test>
 </suite>

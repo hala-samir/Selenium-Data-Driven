@@ -5,6 +5,12 @@ out/
 .idea/
 *.iml
 *.iws
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+.vscode/*
 # Maven
 log/
 target/

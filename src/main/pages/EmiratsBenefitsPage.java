@@ -7,10 +7,8 @@ import org.openqa.selenium.interactions.*;
 public class EmiratsBenefitsPage extends PageBase{
     public EmiratsBenefitsPage(WebDriver driver) {
         super(driver);
-        js= (JavascriptExecutor) driver;
-        builder = new Actions(driver);
+        js = (JavascriptExecutor) driver;
     }
-
     @FindBy(css= ".ui-lib-side-navigation-header-row:nth-child(1)")
     WebElement buildHomeLink;
    public void clickBuildHomeLink(){
